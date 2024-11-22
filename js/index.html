@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color and Image Changer</title>
+    <!-- Google Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+  
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s ease;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        #container {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+      
+        img {
+            width: 100%; 
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .button {
+            display: flex;
+            column-gap: 5rem;
+            gap: 10px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            color: white;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        .button:active {
+            transform: translateY(1px);
+        }
+
+
+        .blue {
+            background-color: #007BFF;
+        }
+
+        .pink {
+            background-color: #FF69B4;
+        }
+
+        .brown {
+            background-color: #6C757D;
+        }
+
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="image" src="hahaha.jpg" alt="Image">
+        <h1>Press the buttons</h1>
+        <button class="button blue" onclick="changeToBlue()">
+            <i class='bx bx-heart'></i> Blue Theme
+        </button>
+        <button class="button pink" onclick="changeToPink()">
+            <i class='bx bx-heart'></i> Pink Theme
+        </button>
+        <button class="button brown" onclick="changeToBrown()">
+            <i class='bx bx-heart'></i> Brown Theme
+        </button>
+    </div>
+
+    <script>
+        function changeToBlue() {
+            document.body.style.backgroundColor = "blue";
+            document.getElementById("image").src = "1.jpg";
+        }
+
+        function changeToPink() {
+            document.body.style.backgroundColor = "pink";
+            document.getElementById("image").src = "2.jpg";
+        }
+
+        function changeToBrown() {
+            document.body.style.backgroundColor = "brown";
+            document.getElementById("image").src = "3.jpg";
+        }
+    </script>
+</body>
+</html>
